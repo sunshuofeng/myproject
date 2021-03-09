@@ -8,7 +8,7 @@ import threading
 import cv2
 import numpy as np
 
-from config import config
+from people_detect.model.emd_refine.config import config
 import misc_utils
 
 def train_dataset(seed=config.seed_dataprovider):
