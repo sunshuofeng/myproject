@@ -3,15 +3,15 @@ import megengine as mge
 import megengine.functional as F
 import megengine.module as M
 
-from config import config
-from backbone.resnet50 import ResNet50
-from backbone.fpn import FPN
-from module.rpn import RPN
-from layers.roi_pool import roi_pool
-from det_opr.bbox_opr import bbox_transform_inv_opr
-from det_opr.fpn_roi_target import fpn_roi_target
-from det_opr.loss_opr import softmax_loss, smooth_l1_loss
-from det_opr.utils import get_padded_tensor
+from people_detect.model.emd_refine.config import config
+from people_detect.lib.backbone.resnet50 import ResNet50
+from people_detect.lib.backbone.fpn import FPN
+from people_detect.lib.module.rpn import RPN
+from people_detect.lib.layers.roi_pool import roi_pool
+from people_detect.lib.det_opr.bbox_opr import bbox_transform_inv_opr
+from people_detect.lib.det_opr.fpn_roi_target import fpn_roi_target
+from people_detect.lib.det_opr.loss_opr import softmax_loss, smooth_l1_loss
+from people_detect.lib.det_opr.utils import get_padded_tensor
 
 class Network(M.Module):
     def __init__(self):
