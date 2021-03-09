@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 
 from people_detect.model.emd_refine.config import config
-import misc_utils
+import people_detect.utils.misc_utils as misc_utils
 
 def train_dataset(seed=config.seed_dataprovider):
     root = config.image_folder
